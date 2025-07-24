@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hotel Booking Form</title>
+    <link rel="shortcut icon" href="images/logo.png" type="image/x-icon" width="96" height="96">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="container" class="container">
+        <div class="header">
+            <img src="images/outfit.jpeg" alt="">
+        </div>
+        <div class="title">
+            <h1>
+                Hotel Guest Book Form
+            </h1>
+        </div>
+        
+            <div class="form">
+                <div>
+                    <div class="name">
+                        <div class="flex">
+                            <div>
+                                <h4>
+                                    Full Name
+                                </h4>
+                            </div>
+                            <div>
+                                <div>
+                                    <input type="text" id="fname" class="full" placeholder="Full Name">
+                                </div>
+                            </div>
+                        </div>
+                    </div> <br><br>
+                    <div class="location">
+                        <div>
+                            <h4>
+                                Pick-Location
+                            </h4>
+                        </div>
+                        <div>
+                            <textarea id="pickup-location-1"></textarea>
+                        </div>
+                    </div>
+                    <div class="Shuttle">
+                        <div>
+                            <div>
+                                <h4>
+                                    Shuttle Service
+                                </h4>
+                            </div>
+                            <div>
+                                <div>
+                                    <input type="radio" name="shuttle" id="shuttle-yes" value="yes">
+                                    <label for="shuttle-yes" onclick="yes()">Yes</label>
+                                </div>
+                                <div>
+                                    <input type="radio" name="shuttle" id="shuttle-no" value="no">
+                                    <label for="shuttle-no" onclick="no()">No</label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="Shuttle-location" class="location">
+                        <div>
+                            <h4>
+                                Pick-Location
+                            </h4>
+                        </div>
+                        <div>
+                            <textarea id="pickup-location-2"></textarea>
+                        </div>
+                    </div>
+                    <div class="nadult">
+                        <div>
+                            <h4>
+                                Number of Adults
+                            </h4>
+                        </div>
+                        <div class="input1">
+                            <input type="number" id="num-adults" class="input1" placeholder="Number of Adults"><br><br>
+                            <input type="number" id="num-nights" class="input1" placeholder="Number of Nights">
+                        </div><br><br><br><br><br><br><br>
+                    </div>
+                </div><br><br><br>
+
+                <div>
+                    <div>
+                        <h1 class="booking-info">
+                            <b>
+                                Booking Information
+                            </b>
+                        </h1>
+                    </div>
+                    <div>
+                        <div>
+                            <div>
+                            </div>
+                            <div class="flex-booking">
+                                <div>
+                                    <h4>Room Type</h4>
+                                    <select class="select" id="Option" onchange="output()">
+                                        <option value="">Please Select</option>
+                                        <option value="Single">Single</option>
+                                        <option value="Double">Double</option>
+                                        <option value="Suite">Suite</option>
+                                        <option value="Deluxe">Deluxe</option>
+                                    </select>
+                                </div>
+
+                                <div>
+                                    <h4>Total Amount</h4>
+                                    <div id="amount" class="amount">
+                                        <p>0</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="flex-booking">
+                                <div>
+                                    <div>
+                                        <div>
+                                            <h4>
+                                                Pick-up Date
+                                            </h4>
+                                            <input type="date" id="pickup-date" class="input1">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div>
+                                    <div>
+                                        <h4>
+                                            Masked Input
+                                        </h4>
+                                        <input type="text" id="masked-input" class="input1">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="flex-booking">
+                                <div>
+                                    <h4>
+                                        Phone Number
+                                    </h4>
+                                    <input type="number" id="phone-number">
+                                </div>
+                                <div>
+                                    <h4>
+                                        Email 
+                                    </h4>
+                                    <input type="email" id="email">
+                                </div>
+                                <div></div>
+                            </div>
+                            <div class="fbox">
+                                <div>
+                                    <div>
+                                        <div>
+                                            <h4>
+                                                Pick-up Time
+                                            </h4>
+                                        </div>
+                                        <div>
+                                            <input type="text" id="pickup-time" placeholder="HH:MM" class="input1">
+                                            <select name="" id="ampm-select" class="am">
+                                                <option>Select</option>
+                                                <option>AM</option>
+                                                <option>PM</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div></div>
+                            </div>
+                            <div>
+                                <div>
+                                    <div>
+                                        <h4>
+                                            Address
+                                        </h4>
+                                    </div>
+                                    <div>
+                                        <input type="text" id="address-1" class="full" placeholder="Street Address 1">
+                                    </div><br><br>
+                                    <div>
+                                        <input type="text" id="address-2" class="full" placeholder="Street Address 2">
+                                    </div><br>
+                                </div>
+                                <div>
+                                    <div>
+                                        <div class="flex">
+                                            <input type="text" id="city" class="input1" placeholder="City">
+                                            <input type="text" id="state" class="input1" placeholder="State">
+                                        </div><br>
+                                        <div>
+                                            <input type="text" id="postal-code" class="full" placeholder="Postal / Zip Code">
+                                        </div>
+                                    </div>
+                                    <div class="Shuttle">
+                                        <div>
+                                            <div>
+                                                <h4>
+                                                    Lease Pocket Wifi ($5)
+                                                </h4>
+                                            </div>
+                                            <div>
+                                                <div>
+                                                    <input type="radio" name="wifi" id="wifi-yes" value="yes">
+                                                    <label for="wifi-yes">Yes</label>
+                                                </div>
+                                                <div>
+                                                    <input type="radio" name="wifi" id="wifi-no" value="no">
+                                                    <label for="wifi-no">No</label>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div>
+                        <h4>
+                            Notes
+                        </h4>
+                        <textarea id="notes"></textarea>
+                    </div>
+                </div><br><br>
+                <div>
+                    <span>
+                        The submission of this form makes a reservation for the type of room selected in the form. Any changes prior the scheduled occupancy should be communicated to us at least 24 hours prior, which may be subject to availability of request.
+                        Check-in time shall be at 2:00PM and checkout time shall be at 12:00NN.
+                    </span>
+                </div><br><br><br>
+                <div class="submit">
+                    <button onclick="return btnsubmit()" >
+                        Book Now
+                    </button>
+                </div>
+            </div>
+        
+    </div>
+    <div id="information" class="information">
+        <div class="informationtable">
+            <div class="information-box">
+                <div>
+                    <h1 >
+                        Your Informations
+                    </h1>
+                </div>
+                <div class="flexx">
+                    <p><b>Name:</b></p>
+                    <p id="name1">None</p>
+                </div>
+                <div class="flexx">
+                    <p><b>Phone-Number:</b></p>
+                    <p id="phone1">None</p>
+                </div>
+                <div class="flexx">
+                    <p><b>Email:</b></p>
+                    <p id="email-info1">None</p>
+                </div>
+                <div class="flexx">
+                    <p><b>Address:</b></p>
+                    <p id="address-info1">None</p>
+                </div>
+                <div class="flexx">
+                    <p><b>City:</b></p>
+                    <p id="city1">None</p>
+                </div>
+                <div class="flexx">
+                    <p><b>State:</b></p>
+                    <p id="state1">None</p>
+                </div>  
+                <div class="flexx">
+                    <p><b>Postal Code:</b></p>
+                    <p id="postal-code1">None</p>
+                </div>
+                <div class="flexx">
+                    <p><b>Room Type:</b></p>
+                    <p id="room-type1">None</p>
+                </div>
+                <div class="flexx">
+                    <p><b>Number of Adults:</b></p>
+                    <p id="num-adults1">None</p>
+                </div>
+                <div class="flexx">
+                    <p><b>Number of Nights:</b></p>
+                    <p id="num-nights1">None</p>
+                </div>
+                <div class="flexx">
+                    <p><b>Pick-up Date:</b></p>
+                    <p id="pickup-date1">None</p>
+                </div>
+                <div class="flexx">
+                    <p><b>Pick-up Time:</b></p>
+                    <p id="pickup-time1">None</p>
+                </div>
+            </div>
+            <div>
+                <a href="Congratulation.html">
+                    <button>
+                        Confirm Booking
+                    </button>
+                </a>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
